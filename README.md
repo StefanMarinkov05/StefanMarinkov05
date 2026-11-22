@@ -57,13 +57,9 @@
 ![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
 </details>
 
-## 📊 Stats
+## 📊 Languages
 
 <div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=StefanMarinkov05&show_icons=true&hide_rank=true&hide_title=true&hide=issues,contribs&hide_border=true&theme=github_dark&bg_color=161b22" />
-  <img height="150" src="https://github-readme-stats.vercel.app/api?username=StefanMarinkov05&show_icons=true&hide_rank=true&hide_title=true&hide=issues,contribs&hide_border=true&bg_color=f6f8fa" alt="GitHub stats" />
-</picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=StefanMarinkov05&layout=compact&langs_count=6&hide_title=true&hide_border=true&theme=github_dark&bg_color=161b22" />
   <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=StefanMarinkov05&layout=compact&langs_count=6&hide_title=true&hide_border=true&bg_color=f6f8fa" alt="Top languages" />

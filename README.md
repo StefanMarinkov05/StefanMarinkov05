@@ -1,17 +1,7 @@
-<div align="center">
-
-<h1>Stefan Marinkov</h1>
-<p>CS student at Saarland University | backend, testing and AI agent security</p>
-
-<p>
-  <img src="https://img.shields.io/badge/Saarbr%C3%BCcken-Germany-0A66C2?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Saarbrücken, Germany" />
-  <img src="https://img.shields.io/badge/Open_to-internships_%26_working_student_roles-2EA44F?style=for-the-badge" alt="Open to internships and working student roles" />
-  <img src="https://img.shields.io/badge/English-C1-8250DF?style=for-the-badge" alt="English C1" />
-</p>
-
-<img src="https://skillicons.dev/icons?i=cs,dotnet,php,laravel,py,django,ts,kotlin,java,docker,githubactions,linux,git,electron&perline=7" alt="Tech stack" />
-
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/skills-dark.svg" />
+  <img src="assets/skills-light.svg" alt="Back-end: C#, ASP.NET Core, PHP, Laravel, Python, REST, SQL. QA and testing: unit to system tests, Playwright, load tests, accessibility audits. Security: authorization flaws, injection, CTF, binary exploitation. AI engineering: Claude Code skills, hooks, MCP, prompt-injection defence, LLM evaluation." width="100%" />
+</picture>
 
 ## 🚀 Projects
 
@@ -67,9 +57,20 @@
 ![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
 </details>
 
-## 🐍 Activity
+## 📊 Stats
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=StefanMarinkov05&show_icons=true&hide_rank=true&hide_title=true&hide=issues,contribs&hide_border=true&theme=github_dark&bg_color=161b22" />
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=StefanMarinkov05&show_icons=true&hide_rank=true&hide_title=true&hide=issues,contribs&hide_border=true&bg_color=f6f8fa" alt="GitHub stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=StefanMarinkov05&layout=compact&langs_count=6&hide_title=true&hide_border=true&theme=github_dark&bg_color=161b22" />
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=StefanMarinkov05&layout=compact&langs_count=6&hide_title=true&hide_border=true&bg_color=f6f8fa" alt="Top languages" />
+</picture>
+</div>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake-dark.svg" />
-  <img src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake.svg" alt="Contribution snake" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/puzzle-bobble-contribution-graph-dark.svg" />
+  <img src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/puzzle-bobble-contribution-graph.svg" alt="Puzzle Bobble playing my contribution graph" width="100%" />
 </picture>

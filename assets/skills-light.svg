@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="232" viewBox="0 0 900 232">
+<style>.t{font:600 19px "Segoe UI",Ubuntu,"Helvetica Neue",Arial,sans-serif;fill:#1f2328}.d{font:400 15px "Segoe UI",Ubuntu,"Helvetica Neue",Arial,sans-serif;fill:#59636e}</style>
+<rect x="0.5" y="0.5" width="899" height="231" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<line x1="450" y1="24" x2="450" y2="208" stroke="#d0d7de"/><line x1="24" y1="116" x2="876" y2="116" stroke="#d0d7de"/>
+<rect x="32" y="26" width="4" height="66" rx="2" fill="#0969da"/>
+<text x="50" y="46" class="t">Back-end</text>
+<text x="50" y="70" class="d">C# / ASP.NET Core, PHP / Laravel, Python</text>
+<text x="50" y="91" class="d">REST APIs, SQL, transactions and locking</text>
+<rect x="482" y="26" width="4" height="66" rx="2" fill="#1a7f37"/>
+<text x="500" y="46" class="t">QA and testing</text>
+<text x="500" y="70" class="d">unit to system tests, Playwright, load tests</text>
+<text x="500" y="91" class="d">accessibility audits, a regression test per fix</text>
+<rect x="32" y="118" width="4" height="66" rx="2" fill="#cf222e"/>
+<text x="50" y="138" class="t">Security</text>
+<text x="50" y="162" class="d">authorization flaws, injection, webhooks</text>
+<text x="50" y="183" class="d">CTF and binary exploitation</text>
+<rect x="482" y="118" width="4" height="66" rx="2" fill="#8250df"/>
+<text x="500" y="138" class="t">AI engineering</text>
+<text x="500" y="162" class="d">Claude Code skills, hooks and MCP</text>
+<text x="500" y="183" class="d">prompt-injection defence, LLM evaluation</text>
+</svg>

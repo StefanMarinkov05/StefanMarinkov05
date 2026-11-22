@@ -5,7 +5,7 @@ name: Profile art
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -46,6 +46,21 @@ jobs:
         run: |
           mkdir -p dist/3d
           cp profile-3d-contrib/*.svg dist/3d/
+
+          # Rotating "Activity" game: a new one every 3 hours, cycling through all six.
+          # index = floor(unix_time / 10800) mod 6
+          GAMES=(pacman galaga breakout puzzle-bobble bomberman snake)
+          i=$(( ($(date +%s) / 10800) % ${#GAMES[@]} ))
+          g=${GAMES[$i]}
+          if [ "$g" = snake ]; then
+            cp dist/github-snake.svg dist/activity.svg
+            cp dist/github-snake-dark.svg dist/activity-dark.svg
+          else
+            cp "dist/$g-contribution-graph.svg" dist/activity.svg
+            cp "dist/$g-contribution-graph-dark.svg" dist/activity-dark.svg
+          fi
+          echo "$g (slot $i, $(date -u +%FT%TZ))" > dist/activity.txt
+          cat dist/activity.txt
           ls -R dist
 
       - name: Publish to output branch

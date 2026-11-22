@@ -69,6 +69,6 @@
 ## 🎮 Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/activity-dark.svg" />
-  <img src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/activity.svg" alt="An arcade game playing my contribution graph; a different game every 3 hours" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://profile-game.stefanmarinkov.workers.dev/?theme=dark" />
+  <img src="https://profile-game.stefanmarinkov.workers.dev/" alt="An arcade game playing my contribution graph; a random game on every visit" width="100%" />
 </picture>

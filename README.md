@@ -1,30 +1,74 @@
-# Stefan Marinkov
+<div align="center">
 
-Computer science student at Saarland University (B.Sc., expected 2027), building software since 2021.
-I take the parts where a bug costs money or trust: payments, stock locking and authorization in web
-apps, and defences that keep AI agents from being steered by text hidden in documents.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=640&lines=Hi%2C+I'm+Stefan+%F0%9F%91%8B;CS+student+%40+Saarland+University;Backend+%7C+Testing+%7C+AI+agent+security" alt="Hi, I'm Stefan" />
 
-Saarbrücken, Germany | Bulgarian (native), English (C1)
+<p>
+  <img src="https://img.shields.io/badge/Saarbr%C3%BCcken-Germany-0A66C2?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Saarbrücken, Germany" />
+  <img src="https://img.shields.io/badge/Open_to-internships_%26_working_student_roles-2EA44F?style=for-the-badge" alt="Open to internships and working student roles" />
+  <img src="https://img.shields.io/badge/English-C1-8250DF?style=for-the-badge" alt="English C1" />
+</p>
 
-## Featured work
+<img src="https://skillicons.dev/icons?i=cs,dotnet,php,laravel,py,django,ts,kotlin,java,docker,githubactions,linux,git,electron&perline=7" alt="Tech stack" />
 
-| Project | What it is | Evidence |
-|---|---|---|
-| [injection-guard](https://github.com/StefanMarinkov05/injection-guard) | Protects AI coding agents from prompt injection: agent hooks plus a scanner for PDF, Office, HTML, email and images (Python) | Red-team bench of 60 attacks with harmless twins, 410 real agent runs, 495 tests in CI, a 20-page paper. A fake correction notice fooled 9 of 9 agents; my added check brought it to 0 of 9 |
-| [Genesis](https://github.com/StefanMarinkov05/genesis_v6-lite) | Turns a JSON spec into a buildable, seeded ASP.NET Core MVC app; the code comes from a deterministic generator, not the model (C#, TypeScript) | Nine-stage resumable pipeline, each code stage gated by a build; the verify stage boots the app and checks every route and access rule. 191 tests, 15 ADRs |
-| [Amazoff](https://github.com/StefanMarinkov05/Amazoff-PHP) | Laravel online shop from my internship at Lumen101, two-person team (PHP) | My parts: database locking on stock, coupons and orders; Stripe webhooks that never charge twice; a closed authorization bypass, each fix with a test that fails without it; 21 of the shop's 25 decisions documented as ADRs |
-| [AI development setup](https://github.com/StefanMarinkov05/claude-config-public) | Reusable skills, rules and hooks that keep AI coding agents inside a project's decisions (Shell) | Hooks block unsafe agent behaviour, for example reading .env, so credentials never reach transcripts or logs |
-| [.NET E-Commerce Store](https://github.com/StefanMarinkov05/E-commerce) | Online store with clean architecture (C#, ASP.NET Core, SQL Server) | Diploma project for my vocational qualification (SoftUni) |
+</div>
 
-## Skills
+## 🚀 Projects
 
-- **Languages:** C#, PHP, Python, TypeScript, Kotlin, Java, SQL
-- **Backend and data:** ASP.NET Core, Laravel, Django, REST APIs, relational schema design, transactions and locking
-- **Quality and security:** automated tests from unit to system level, Playwright, load testing, WCAG 2.1 AA audits, application security, CTF and binary exploitation
-- **AI engineering:** Claude Code skills, hooks and MCP, prompt engineering, LLM evaluation
-- **Delivery:** Git and pull-request review, Docker, GitHub Actions, Linux
+<details open>
+<summary><b>🛡️ <a href="https://github.com/StefanMarinkov05/injection-guard">injection-guard</a></b> | stops hidden instructions in files and web pages from taking over AI coding agents</summary>
+<br>
 
-## How I work
+- Scanner for PDF, Office, HTML, email and images, plus hooks for Claude Code
+- Tested on 60 attacks, each with a harmless twin, over 410 real agent runs
+- 495 tests in CI and a 20-page paper
 
-I write the intent before an AI agent codes, record every decision as an ADR, review the result by hand,
-and add a regression test for every fix.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Tests](https://img.shields.io/badge/tests-495-2EA44F?style=flat-square)
+</details>
+
+<details>
+<summary><b>⚙️ <a href="https://github.com/StefanMarinkov05/genesis_v6-lite">Genesis</a></b> | JSON spec in, working ASP.NET Core app out</summary>
+<br>
+
+- Generates models, database, login and roles, pages and seed data
+- Same spec, same app every time: the code comes from my generator, not from an AI model
+- Boots the app and checks every page before it says done; 191 tests, Electron desktop app
+
+![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Tests](https://img.shields.io/badge/tests-191-2EA44F?style=flat-square)
+</details>
+
+<details>
+<summary><b>🛒 <a href="https://github.com/StefanMarinkov05/Amazoff-PHP">Amazoff</a></b> | Laravel online shop from my internship at Lumen101</summary>
+<br>
+
+- Two buyers can't take the last item: database locking on stock, coupons and orders
+- Stripe payments that never charge twice
+- Found and fixed an authorization bug, with a test for each fix
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
+</details>
+
+<details>
+<summary><b>🤖 <a href="https://github.com/StefanMarinkov05/claude-config-public">My Claude Code setup</a></b> | the skills and hooks I code with every day</summary>
+<br>
+
+- Skills and rules that make the agent follow the project's decisions
+- A hook that blocks the agent from reading `.env` files
+
+![Shell](https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnubash&logoColor=white) ![Claude](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white)
+</details>
+
+<details>
+<summary><b>🏬 <a href="https://github.com/StefanMarinkov05/E-commerce">.NET E-Commerce Store</a></b> | my SoftUni diploma project</summary>
+<br>
+
+- Online store with clean architecture, ASP.NET Core and SQL Server
+
+![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+</details>
+
+## 🐍 Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake.svg" alt="Contribution snake" />
+</picture>

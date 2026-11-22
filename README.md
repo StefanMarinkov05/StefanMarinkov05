@@ -66,6 +66,8 @@
 </picture>
 </div>
 
+## 🎮 Activity
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/puzzle-bobble-contribution-graph-dark.svg" />
   <img src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/puzzle-bobble-contribution-graph.svg" alt="Puzzle Bobble playing my contribution graph" width="100%" />

@@ -5,7 +5,7 @@ name: Profile art
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -47,7 +47,7 @@ jobs:
           mkdir -p dist/3d
           cp profile-3d-contrib/*.svg dist/3d/
 
-          # Rotating "Activity" game: a new one every 3 hours, cycling through all six.
+          # Fallback "Activity" game (time-based); the README uses the random picker in worker/.
           # index = floor(unix_time / 10800) mod 6
           GAMES=(pacman galaga breakout puzzle-bobble bomberman snake)
           i=$(( ($(date +%s) / 10800) % ${#GAMES[@]} ))

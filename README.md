@@ -15,7 +15,7 @@
 ## 🚀 Projects
 
 <details open>
-<summary><b>🛡️ <a href="https://github.com/StefanMarinkov05/injection-guard">injection-guard</a></b> | stops hidden instructions in files and web pages from taking over AI coding agents</summary>
+<summary><b>🛡️ <a href="https://github.com/StefanMarinkov05/injection-guard">injection-guard</a></b> | stops hidden instructions in files and web pages from taking over AI agents</summary>
 <br>
 
 - Scanner for PDF, Office, HTML, email and images, plus hooks for Claude Code

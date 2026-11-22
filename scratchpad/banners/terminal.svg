@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="230" viewBox="0 0 900 230">
+  <style>
+    text{font:400 18px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .p{fill:#3fb950}.c{fill:#e6edf3}.o{fill:#8b949e}
+    .l{opacity:0;animation:show .01s forwards}
+    .l1{animation-delay:.4s}.l2{animation-delay:1.2s}.l3{animation-delay:2s}.l4{animation-delay:2.8s}.l5{animation-delay:3.6s}
+    .cur{animation:blink 1s steps(1) infinite}
+    @keyframes show{to{opacity:1}}
+    @keyframes blink{50%{opacity:0}}
+  </style>
+  <rect width="900" height="230" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <circle cx="28" cy="24" r="7" fill="#ff5f56"/><circle cx="52" cy="24" r="7" fill="#ffbd2e"/><circle cx="76" cy="24" r="7" fill="#27c93f"/>
+  <text x="450" y="29" text-anchor="middle" class="o" style="font-size:14px">stefan@saarbruecken: ~</text>
+  <text x="28" y="78" class="l l1"><tspan class="p">$ </tspan><tspan class="c">whoami</tspan></text>
+  <text x="28" y="106" class="l l2 o">Stefan Marinkov, CS student at Saarland University</text>
+  <text x="28" y="146" class="l l3"><tspan class="p">$ </tspan><tspan class="c">cat focus.txt</tspan></text>
+  <text x="28" y="174" class="l l4 o">backend | testing | ai agent security</text>
+  <text x="28" y="212" class="l l5"><tspan class="p">$ </tspan><tspan class="c cur">_</tspan></text>
+</svg>

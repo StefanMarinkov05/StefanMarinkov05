@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=640&lines=Hi%2C+I'm+Stefan+%F0%9F%91%8B;CS+student+%40+Saarland+University;Backend+%7C+Testing+%7C+AI+agent+security" alt="Hi, I'm Stefan" />
+<h1>Stefan Marinkov</h1>
+<p>CS student at Saarland University | backend, testing and AI agent security</p>
 
 <p>
   <img src="https://img.shields.io/badge/Saarbr%C3%BCcken-Germany-0A66C2?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Saarbrücken, Germany" />
@@ -72,3 +73,5 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake-dark.svg" />
   <img src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake.svg" alt="Contribution snake" />
 </picture>
+
+<sub>🧪 Playing with the look of this page in <a href="scratchpad/">scratchpad/</a></sub>

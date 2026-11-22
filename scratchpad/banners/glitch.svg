@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="180" viewBox="0 0 900 180">
+  <style>
+    .t{font:900 64px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .r{fill:#ff2a6d;animation:a 2.5s infinite steps(1)}
+    .b{fill:#05d9e8;animation:b 2.5s infinite steps(1)}
+    .w{fill:#f5f5f5}
+    @keyframes a{0%,88%,100%{transform:translate(0,0)}90%{transform:translate(-6px,2px)}94%{transform:translate(5px,-3px)}}
+    @keyframes b{0%,88%,100%{transform:translate(0,0)}90%{transform:translate(6px,-2px)}94%{transform:translate(-5px,3px)}}
+    .s{font:400 16px ui-monospace,Menlo,Consolas,monospace;fill:#05d9e8}
+  </style>
+  <rect width="900" height="180" rx="14" fill="#01012b"/>
+  <text x="450" y="100" text-anchor="middle" class="t r">STEFAN MARINKOV</text>
+  <text x="450" y="100" text-anchor="middle" class="t b">STEFAN MARINKOV</text>
+  <text x="450" y="100" text-anchor="middle" class="t w">STEFAN MARINKOV</text>
+  <text x="450" y="145" text-anchor="middle" class="s">// breaking things on purpose, then fixing them</text>
+</svg>

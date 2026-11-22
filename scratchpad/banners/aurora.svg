@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <defs>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    <clipPath id="clip"><rect width="900" height="200" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .name{font:800 58px 'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif;fill:#fff}
+    .sub{font:500 18px 'Segoe UI',Ubuntu,Arial,sans-serif;fill:#ffffffcc;letter-spacing:3px}
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="900" height="200" fill="#0b1020"/>
+    <g filter="url(#blur)">
+      <circle cx="180" cy="60" r="120" fill="#7c3aed"><animate attributeName="cx" values="180;320;180" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="620" cy="150" r="130" fill="#0ea5e9"><animate attributeName="cx" values="620;480;620" dur="11s" repeatCount="indefinite"/></circle>
+      <circle cx="420" cy="40" r="90" fill="#ec4899"><animate attributeName="cy" values="40;140;40" dur="7s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+  <text x="450" y="108" text-anchor="middle" class="name">Stefan Marinkov</text>
+  <text x="450" y="148" text-anchor="middle" class="sub">BACKEND  |  TESTING  |  AI AGENT SECURITY</text>
+</svg>

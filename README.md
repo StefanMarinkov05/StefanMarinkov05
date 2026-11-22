@@ -61,8 +61,8 @@
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=StefanMarinkov05&layout=compact&langs_count=6&hide_title=true&hide_border=true&theme=github_dark&bg_color=161b22" />
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=StefanMarinkov05&layout=compact&langs_count=6&hide_title=true&hide_border=true&bg_color=f6f8fa" alt="Top languages" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/languages-dark.svg" />
+  <img width="400" src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/languages.svg" alt="Top languages across all my repositories, public and private" />
 </picture>
 </div>
 

@@ -73,5 +73,3 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake-dark.svg" />
   <img src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/github-snake.svg" alt="Contribution snake" />
 </picture>
-
-<sub>🧪 Playing with the look of this page in <a href="scratchpad/">scratchpad/</a></sub>

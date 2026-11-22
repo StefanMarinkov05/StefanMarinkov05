@@ -16,6 +16,8 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    env:
+      LANG_TOKEN: ${{ secrets.LANG_TOKEN }}
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
@@ -62,6 +64,11 @@ jobs:
           echo "$g (slot $i, $(date -u +%FT%TZ))" > dist/activity.txt
           cat dist/activity.txt
           ls -R dist
+
+      - name: Top languages over public and private repos
+        # Needs the LANG_TOKEN secret (fine-grained token, all repos, read-only metadata). Skipped without it.
+        if: ${{ env.LANG_TOKEN != '' }}
+        run: GH_TOKEN="$LANG_TOKEN" python3 scripts/languages.py dist
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v4

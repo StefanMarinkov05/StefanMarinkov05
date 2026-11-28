@@ -17,12 +17,12 @@ SKIP = {"CSS", "SCSS", "Less", "Jupyter Notebook", "Makefile", "Dockerfile", "Ba
         "PowerShell", "Procfile", "Blade", "Hack", "Twig"}
 QUERY = """query($cursor:String){viewer{repositories(first:100, after:$cursor, ownerAffiliations:OWNER, isFork:false){
   pageInfo{hasNextPage endCursor}
-  nodes{nameWithOwner defaultBranchRef{name} languages(first:30, orderBy:{field:SIZE, direction:DESC}){edges{size node{name color}}}}}}}"""
+  nodes{nameWithOwner languages(first:30, orderBy:{field:SIZE, direction:DESC}){edges{size node{name color}}}}}}}"""
 
 
 def markdown_bytes(token, full_name, branch):
     """GitHub's language data leaves out Markdown (prose), so sum the .md blob sizes of the default branch.
-    Needs Contents: read on the token; on any error this repo adds 0 and the card still builds."""
+    Needs Contents: read on the token (metadata alone gives 403); on any error this repo adds 0 and the card still builds."""
     try:
         req = urllib.request.Request(
             f"https://api.github.com/repos/{full_name}/git/trees/{branch}?recursive=1",
@@ -48,11 +48,10 @@ def fetch(token):
         page = data["data"]["viewer"]["repositories"]
         for repo in page["nodes"]:
             repos += 1
-            if repo.get("defaultBranchRef"):
-                md = markdown_bytes(token, repo["nameWithOwner"], repo["defaultBranchRef"]["name"])
-                if md:
-                    totals["Markdown"] = totals.get("Markdown", 0) + md
-                    colors["Markdown"] = "#083fa1"
+            md = markdown_bytes(token, repo["nameWithOwner"], "HEAD")  # HEAD = default branch
+            if md:
+                totals["Markdown"] = totals.get("Markdown", 0) + md
+                colors["Markdown"] = "#083fa1"
             for edge in repo["languages"]["edges"]:
                 name = edge["node"]["name"]
                 if name in SKIP:

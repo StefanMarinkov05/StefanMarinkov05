@@ -1,0 +1,27 @@
+name: tests
+
+# Unit and integration tests for scripts/languages.py. No network, no secrets: GitHub's API is faked.
+
+on:
+  push:
+    branches: [main]
+    paths: ["scripts/**", "tests/**", ".github/workflows/tests.yml"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.14"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python3 -m unittest discover -s tests -v

@@ -10,7 +10,8 @@ import sys
 import urllib.request
 from html import escape
 
-TOP = 6
+TOP = 10
+PYRAMID = [1, 2, 3, 4]  # languages per row, rank 1 on top (1+2+3+4 = TOP, symmetrical)
 # Styles and build files are skipped. HTML, TeX and Markdown count (Stefan, 2026-11-28): he writes handbooks and docs too.
 SKIP = {"CSS", "SCSS", "Less", "Jupyter Notebook", "Makefile", "Dockerfile", "Batchfile",
         "PowerShell", "Procfile", "Blade", "Hack", "Twig"}
@@ -66,25 +67,33 @@ def fetch(token):
 def svg(rows, dark):
     fg, sub, bar_bg, bg = (("#e6edf3", "#8b949e", "#30363d", "#161b22") if dark
                            else ("#1f2328", "#59636e", "#d0d7de", "#f6f8fa"))
-    w, h = 400, 54 + 22 * ((len(rows) + 1) // 2)
+    w, h = 460, 44 + 24 * len(PYRAMID)
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Top languages">',
         f'<rect width="{w}" height="{h}" rx="6" fill="{bg}"/>',
         '<style>text{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}</style>',
-        '<clipPath id="r"><rect x="20" y="18" width="360" height="8" rx="4"/></clipPath>',
-        f'<rect x="20" y="18" width="360" height="8" rx="4" fill="{bar_bg}"/>',
+        '<clipPath id="r"><rect x="20" y="18" width="420" height="8" rx="4"/></clipPath>',
+        f'<rect x="20" y="18" width="420" height="8" rx="4" fill="{bar_bg}"/>',
         '<g clip-path="url(#r)">',
     ]
     x = 20.0
     for _, pct, color in rows:
-        width = 360 * pct / 100
+        width = 420 * pct / 100
         out.append(f'<rect x="{x:.2f}" y="18" width="{width + 0.5:.2f}" height="8" fill="{color}"/>')
         x += width
     out.append("</g>")
-    for i, (name, pct, color) in enumerate(rows):
-        cx, cy = 26 + 190 * (i % 2), 50 + 22 * (i // 2)
-        out.append(f'<circle cx="{cx}" cy="{cy - 4}" r="5" fill="{color}"/>')
-        out.append(f'<text x="{cx + 12}" y="{cy}" fill="{fg}">{escape(name)} <tspan fill="{sub}">{pct:.1f}%</tspan></text>')
+    i = 0
+    for r, n in enumerate(PYRAMID):
+        slot = 110
+        x0 = 230 - slot * n / 2  # each row centred under the one above
+        for c in range(n):
+            if i >= len(rows):
+                break
+            name, pct, color = rows[i]
+            cx, cy = x0 + slot * c + 6, 56 + 24 * r
+            out.append(f'<circle cx="{cx:.1f}" cy="{cy - 4}" r="5" fill="{color}"/>')
+            out.append(f'<text x="{cx + 11:.1f}" y="{cy}" fill="{fg}">{escape(name)} <tspan fill="{sub}">{pct:.1f}%</tspan></text>')
+            i += 1
     out.append("</svg>")
     return "\n".join(out)
 

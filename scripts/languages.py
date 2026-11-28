@@ -12,8 +12,8 @@ from html import escape
 
 TOP = 10
 PYRAMID = [1, 2, 3, 4]  # languages per row, rank 1 on top (1+2+3+4 = TOP, symmetrical)
-# Styles and build files are skipped. HTML, TeX and Markdown count (Stefan, 2026-11-28): he writes handbooks and docs too.
-SKIP = {"CSS", "SCSS", "Less", "Jupyter Notebook", "Makefile", "Dockerfile", "Batchfile",
+# HTML, styles and build files are skipped (generated pages and base64 inflate them). TeX and Markdown count (Stefan, 2026-11-28).
+SKIP = {"HTML", "CSS", "SCSS", "Less", "Jupyter Notebook", "Makefile", "Dockerfile", "Batchfile",
         "PowerShell", "Procfile", "Blade", "Hack", "Twig"}
 QUERY = """query($cursor:String){viewer{repositories(first:100, after:$cursor, ownerAffiliations:OWNER, isFork:false){
   pageInfo{hasNextPage endCursor}

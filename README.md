@@ -62,7 +62,7 @@
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/languages-dark.svg" />
-  <img width="400" src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/languages.svg" alt="Top languages across all my repositories, public and private" />
+  <img width="460" src="https://raw.githubusercontent.com/StefanMarinkov05/StefanMarinkov05/output/languages.svg" alt="Top 10 languages across all my repositories, public and private, including Markdown and LaTeX; HTML, CSS and build files not counted" />
 </picture>
 </div>
 

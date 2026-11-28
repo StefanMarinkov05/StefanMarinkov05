@@ -103,15 +103,16 @@ class Fetch(unittest.TestCase):
                         {"me/a": tree(("a.md", 30, "blob")), "me/b": tree(("b.md", 20, "blob"))})
         totals, colors, repos = run_fetch(gh)
         self.assertEqual(repos, 2)
-        self.assertEqual(totals, {"Python": 150, "HTML": 40, "TeX": 10, "Markdown": 50})
+        self.assertEqual(totals, {"Python": 150, "TeX": 10, "Markdown": 50})  # HTML is skipped
         self.assertEqual(colors["Markdown"], "#083fa1")
 
-    def test_html_tex_markdown_count_but_styles_and_build_files_do_not(self):
-        self.assertTrue({"HTML", "TeX"}.isdisjoint(lang.SKIP))
+    def test_tex_and_markdown_count_but_html_styles_and_build_files_do_not(self):
+        self.assertTrue({"TeX", "Python"}.isdisjoint(lang.SKIP))
         self.assertNotIn("Markdown", lang.SKIP)
-        gh = FakeGitHub([page([node("a", CSS=9, SCSS=9, Makefile=9, Dockerfile=9, HTML=1, TeX=1)])])
+        self.assertLessEqual({"HTML", "CSS", "SCSS", "Makefile", "Dockerfile"}, lang.SKIP)
+        gh = FakeGitHub([page([node("a", HTML=9, CSS=9, SCSS=9, Makefile=9, Dockerfile=9, TeX=1, Python=2)])])
         totals, _, _ = run_fetch(gh)
-        self.assertEqual(totals, {"HTML": 1, "TeX": 1})
+        self.assertEqual(totals, {"TeX": 1, "Python": 2})
 
     def test_missing_color_falls_back_to_grey(self):
         _, colors, _ = run_fetch(FakeGitHub([page([node("a", Nocolor=5)])]))

@@ -11,12 +11,26 @@ import urllib.request
 from html import escape
 
 TOP = 6
-# Markup, styles and build files are not "code I write"; same idea as linguist's defaults for profile cards.
-SKIP = {"HTML", "CSS", "SCSS", "Less", "Jupyter Notebook", "Makefile", "Dockerfile", "Batchfile",
-        "PowerShell", "Procfile", "Blade", "Hack", "Twig", "TeX"}
+# Styles and build files are skipped. HTML, TeX and Markdown count (Stefan, 2026-11-28): he writes handbooks and docs too.
+SKIP = {"CSS", "SCSS", "Less", "Jupyter Notebook", "Makefile", "Dockerfile", "Batchfile",
+        "PowerShell", "Procfile", "Blade", "Hack", "Twig"}
 QUERY = """query($cursor:String){viewer{repositories(first:100, after:$cursor, ownerAffiliations:OWNER, isFork:false){
   pageInfo{hasNextPage endCursor}
-  nodes{languages(first:30, orderBy:{field:SIZE, direction:DESC}){edges{size node{name color}}}}}}}"""
+  nodes{nameWithOwner defaultBranchRef{name} languages(first:30, orderBy:{field:SIZE, direction:DESC}){edges{size node{name color}}}}}}}"""
+
+
+def markdown_bytes(token, full_name, branch):
+    """GitHub's language data leaves out Markdown (prose), so sum the .md blob sizes of the default branch.
+    Needs Contents: read on the token; on any error this repo adds 0 and the card still builds."""
+    try:
+        req = urllib.request.Request(
+            f"https://api.github.com/repos/{full_name}/git/trees/{branch}?recursive=1",
+            headers={"Authorization": f"bearer {token}", "Accept": "application/vnd.github+json"})
+        tree = json.load(urllib.request.urlopen(req))["tree"]
+    except Exception as e:
+        print(f"markdown: skipped one repo ({type(e).__name__})", file=sys.stderr)
+        return 0
+    return sum(x.get("size", 0) for x in tree if x["type"] == "blob" and x["path"].lower().endswith((".md", ".markdown")))
 
 
 def fetch(token):
@@ -33,6 +47,11 @@ def fetch(token):
         page = data["data"]["viewer"]["repositories"]
         for repo in page["nodes"]:
             repos += 1
+            if repo.get("defaultBranchRef"):
+                md = markdown_bytes(token, repo["nameWithOwner"], repo["defaultBranchRef"]["name"])
+                if md:
+                    totals["Markdown"] = totals.get("Markdown", 0) + md
+                    colors["Markdown"] = "#083fa1"
             for edge in repo["languages"]["edges"]:
                 name = edge["node"]["name"]
                 if name in SKIP:
